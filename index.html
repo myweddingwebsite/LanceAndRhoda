@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lance & Rhoda | December 12, 2026</title>
+<meta name="description" content="Join Lance & Rhoda as they celebrate their wedding on December 12, 2026 at Mt. Carmel Shrine, New Manila, Quezon City.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================= TOKENS ============================= */
+:root{
+  --royal-deep:#122A5C;
+  --royal:#1E3D77;
+  --royal-light:#2E56A0;
+  --royal-mist:#EEF2FA;
+  --gold:#C6A664;
+  --gold-bright:#E6C77E;
+  --cream:#FBF9F4;
+  --white:#FFFFFF;
+  --beige:#E7DCC7;
+  --ink:#171B2E;
+  --ink-soft:#4B5266;
+  --line:rgba(18,42,92,0.14);
+  --shadow-soft:0 20px 50px -20px rgba(18,42,92,0.25);
+  --shadow-card:0 10px 30px -12px rgba(18,42,92,0.18);
+  --radius-lg:28px;
+  --radius-md:18px;
+  --radius-sm:12px;
+  --serif:'Playfair Display', 'Cormorant Garamond', serif;
+  --script:'Cormorant Garamond', serif;
+  --sans:'Poppins', sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+}
+body{
+  margin:0;
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--cream);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--serif); margin:0; color:var(--royal-deep); font-weight:600;}
+p{margin:0; line-height:1.7; color:var(--ink-soft);}
+a{color:inherit; text-decoration:none;}
+img{max-width:100%; display:block;}
+button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
+:focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
+.container{max-width:1180px; margin:0 auto; padding:0 24px;}
+.section{padding:120px 0; position:relative;}
+@media (max-width:768px){ .section{padding:80px 0;} }
+
+.eyebrow{
+  font-family:var(--sans); letter-spacing:.32em; text-transform:uppercase;
+  font-size:.72rem; color:var(--gold); font-weight:600; display:inline-block; margin-bottom:14px;
+}
+.section-title{font-size:clamp(2rem,4vw,3rem); text-align:center; margin-bottom:8px;}
+.section-sub{text-align:center; max-width:560px; margin:0 auto 60px; font-family:var(--script); font-size:1.25rem; font-style:italic; color:var(--royal-light);}
+
+.divider{
+  width:120px; height:auto; margin:26px auto; opacity:.85;
+}
+
+/* reveal on scroll */
+.reveal{opacity:0; transform:translateY(36px); transition:opacity .9s var(--ease), transform .9s var(--ease);}
+.reveal.in{opacity:1; transform:translateY(0);}
+.reveal-scale{opacity:0; transform:scale(.92); transition:opacity .8s var(--ease), transform .8s var(--ease);}
+.reveal-scale.in{opacity:1; transform:scale(1);}
+
+/* glass card */
+.glass{
+  background:rgba(255,255,255,0.62);
+  backdrop-filter:blur(16px) saturate(140%);
+  -webkit-backdrop-filter:blur(16px) saturate(140%);
+  border:1px solid rgba(255,255,255,0.55);
+  box-shadow:var(--shadow-card);
+  border-radius:var(--radius-lg);
+}
+
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:16px 38px;
+  border-radius:100px;
+  font-size:.85rem; letter-spacing:.12em; text-transform:uppercase; font-weight:600;
+  transition:transform .45s var(--ease), box-shadow .45s var(--ease), background .3s;
+  position:relative; overflow:hidden;
+}
+.btn-primary{
+  background:linear-gradient(135deg, var(--royal), var(--royal-deep));
+  color:var(--white);
+  box-shadow:0 14px 34px -12px rgba(18,42,92,.55);
+}
+.btn-primary:hover{ transform:translateY(-3px); box-shadow:0 20px 40px -12px rgba(18,42,92,.65); }
+.btn-gold{
+  background:linear-gradient(135deg, var(--gold-bright), var(--gold));
+  color:var(--royal-deep);
+  box-shadow:0 14px 30px -12px rgba(198,166,100,.6);
+}
+.btn-gold:hover{ transform:translateY(-3px); }
+.btn-outline{
+  background:transparent; color:var(--royal-deep); border:1.5px solid var(--royal-deep);
+}
+.btn-outline:hover{ background:var(--royal-deep); color:var(--white); }
+.btn-sm{ padding:11px 24px; font-size:.72rem; }
+
+/* ============================= PRELOADER ============================= */
+#preloader{
+  position:fixed; inset:0; z-index:9999;
+  background:var(--royal-deep);
+  display:flex; align-items:center; justify-content:center;
+  transition:opacity .9s var(--ease), visibility .9s var(--ease);
+}
+#preloader.hide{ opacity:0; visibility:hidden; pointer-events:none; }
+.seal{ position:relative; width:150px; height:150px; }
+.seal svg{ width:100%; height:100%; }
+.seal-ring{
+  stroke:var(--gold); stroke-width:1.4; fill:none;
+  stroke-dasharray:440; stroke-dashoffset:440;
+  animation:drawRing 1.8s var(--ease) forwards .1s;
+}
+.seal-monogram{
+  font-family:var(--serif); font-size:2.6rem; fill:var(--gold-bright);
+  opacity:0; transform-origin:center;
+  animation:fadeScale 1s var(--ease) forwards 1.3s;
+}
+@keyframes drawRing{ to{ stroke-dashoffset:0; } }
+@keyframes fadeScale{ from{opacity:0; transform:scale(.6);} to{opacity:1; transform:scale(1);} }
+.preloader-label{
+  position:absolute; bottom:-46px; left:50%; transform:translateX(-50%);
+  color:var(--gold); letter-spacing:.4em; text-transform:uppercase; font-size:.68rem;
+  white-space:nowrap; opacity:0; animation:fadeIn 1s ease forwards 1.7s;
+}
+@keyframes fadeIn{ to{opacity:.85;} }
+
+/* ============================= NAV ============================= */
+#navbar{
+  position:fixed; top:0; left:0; right:0; z-index:1000;
+  padding:22px 0; transition:all .5s var(--ease);
+}
+#navbar .nav-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  max-width:1180px; margin:0 auto; padding:0 24px;
+}
+.nav-crest{ font-family:var(--serif); font-size:1.3rem; color:var(--white); letter-spacing:.05em; transition:color .4s; }
+.nav-crest span{ color:var(--gold-bright); }
+#navbar.scrolled{
+  background:rgba(251,249,244,0.88); backdrop-filter:blur(14px);
+  box-shadow:0 6px 24px -10px rgba(18,42,92,.18);
+  padding:14px 0;
+}
+#navbar.scrolled .nav-crest{ color:var(--royal-deep); }
+#navbar.scrolled .nav-crest span{ color:var(--gold); }
+.nav-links{ display:flex; gap:30px; list-style:none; margin:0; padding:0; }
+.nav-links a{
+  font-size:.76rem; letter-spacing:.1em; text-transform:uppercase; font-weight:500;
+  color:var(--white); position:relative; padding-bottom:4px; transition:color .4s;
+}
+#navbar.scrolled .nav-links a{ color:var(--ink); }
+.nav-links a::after{
+  content:''; position:absolute; left:0; bottom:0; width:0; height:1.5px; background:var(--gold);
+  transition:width .35s var(--ease);
+}
+.nav-links a:hover::after{ width:100%; }
+.hamburger{ display:none; flex-direction:column; gap:5px; width:30px; z-index:1100; background:none; }
+.hamburger span{ display:block; height:2px; width:100%; background:var(--white); transition:all .35s var(--ease); border-radius:2px; }
+#navbar.scrolled .hamburger span{ background:var(--royal-deep); }
+.hamburger.active span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2){ opacity:0; }
+.hamburger.active span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+@media (max-width:900px){
+  .nav-links{
+    position:fixed; top:0; right:0; height:100vh; width:min(78vw,320px);
+    background:linear-gradient(160deg, var(--royal-deep), var(--royal));
+    flex-direction:column; justify-content:center; align-items:flex-start;
+    padding:40px; gap:26px; transform:translateX(100%); transition:transform .5s var(--ease);
+  }
+  .nav-links.open{ transform:translateX(0); }
+  .nav-links a{ color:var(--white) !important; font-size:.9rem; }
+  .hamburger{ display:flex; }
+}
+
+/* ============================= HERO ============================= */
+#hero{
+  position:relative; min-height:100svh; display:flex; align-items:center; justify-content:center;
+  text-align:center; overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(46,86,160,.55), transparent 60%),
+    linear-gradient(160deg, #0D1F44 0%, #16305F 45%, #1E3D77 100%);
+}
+.hero-monogram-bg{
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  opacity:.09; pointer-events:none;
+}
+.hero-monogram-bg svg{ width:min(90vw,900px); height:auto; }
+.hero-sparkle{ position:absolute; border-radius:50%; background:var(--gold-bright); opacity:.5; filter:blur(1px); animation:twinkle 4s ease-in-out infinite; }
+@keyframes twinkle{ 0%,100%{opacity:.15; transform:scale(.8);} 50%{opacity:.7; transform:scale(1.2);} }
+.hero-content{ position:relative; z-index:2; padding:0 24px; color:var(--white); }
+.hero-eyebrow{
+  letter-spacing:.5em; text-transform:uppercase; font-size:.7rem; color:var(--gold-bright);
+  margin-bottom:26px; opacity:0; animation:heroFade .9s var(--ease) forwards .3s;
+}
+.hero-names{
+  font-family:var(--serif); font-weight:600; font-size:clamp(3rem,9vw,6.2rem); line-height:1.05;
+  opacity:0; animation:heroFade 1s var(--ease) forwards .5s;
+}
+.hero-amp{
+  display:block; font-family:var(--script); font-style:italic; font-weight:400;
+  font-size:clamp(1.6rem,4vw,2.6rem); color:var(--gold-bright); margin:6px 0;
+}
+.hero-date{
+  margin-top:30px; font-family:var(--sans); letter-spacing:.15em; font-size:1rem; text-transform:uppercase;
+  color:rgba(255,255,255,.9); opacity:0; animation:heroFade 1s var(--ease) forwards .8s;
+}
+.hero-date b{ color:var(--gold-bright); font-weight:600; }
+.hero-time{
+  margin-top:6px; font-family:var(--script); font-style:italic; font-size:1.15rem; color:rgba(255,255,255,.8);
+  opacity:0; animation:heroFade 1s var(--ease) forwards 1s;
+}
+.hero-cta{ margin-top:48px; opacity:0; animation:heroFade 1s var(--ease) forwards 1.25s; }
+@keyframes heroFade{ from{opacity:0; transform:translateY(22px);} to{opacity:1; transform:translateY(0);} }
+.scroll-cue{
+  position:absolute; bottom:34px; left:50%; transform:translateX(-50%); z-index:2;
+  color:rgba(255,255,255,.7); display:flex; flex-direction:column; align-items:center; gap:8px;
+  font-size:.65rem; letter-spacing:.3em; text-transform:uppercase;
+  opacity:0; animation:heroFade 1s var(--ease) forwards 1.5s;
+}
+.scroll-cue .line{ width:1px; height:34px; background:linear-gradient(var(--gold-bright), transparent); animation:scrollLine 1.8s ease-in-out infinite; }
+@keyframes scrollLine{ 0%{ transform:scaleY(0); transform-origin:top;} 50%{ transform:scaleY(1); transform-origin:top;} 51%{transform-origin:bottom;} 100%{ transform:scaleY(0); transform-origin:bottom;} }
+
+/* ============================= COUNTDOWN ============================= */
+#countdown{
+  background:linear-gradient(180deg, var(--royal-deep), var(--royal));
+  padding:70px 0; text-align:center;
+}
+.countdown-label{ color:var(--gold-bright); letter-spacing:.35em; text-transform:uppercase; font-size:.72rem; margin-bottom:30px; }
+.countdown-grid{ display:flex; justify-content:center; gap:18px; flex-wrap:wrap; }
+.countdown-unit{
+  min-width:100px; padding:22px 10px;
+  background:rgba(255,255,255,.06); border:1px solid rgba(230,199,126,.28);
+  border-radius:var(--radius-md);
+}
+.countdown-num{ font-family:var(--serif); font-size:clamp(1.8rem,4vw,2.8rem); color:var(--white); font-variant-numeric:tabular-nums; }
+.countdown-unit-label{ margin-top:6px; font-size:.65rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.65); }
+
+/* ============================= DECOR DIVIDER ============================= */
+.flourish{ display:flex; align-items:center; justify-content:center; gap:14px; margin:0 auto 50px; width:fit-content; }
+.flourish .line{ width:60px; height:1px; background:linear-gradient(90deg, transparent, var(--gold)); }
+.flourish .line.r{ background:linear-gradient(90deg, var(--gold), transparent); }
+.flourish svg{ width:20px; height:20px; color:var(--gold); }
+
+/* ============================= EVENT DETAILS ============================= */
+#event-details{ background:var(--white); }
+.event-grid{ display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+@media (max-width:820px){ .event-grid{ grid-template-columns:1fr; } }
+.event-card{ overflow:hidden; }
+.event-photo{ height:240px; position:relative; overflow:hidden; }
+.event-photo img{ width:100%; height:100%; object-fit:cover; transition:transform .8s var(--ease); }
+.event-card:hover .event-photo img{ transform:scale(1.06); }
+.event-photo::after{ content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(18,42,92,0) 40%, rgba(18,42,92,.5)); }
+.event-tag{
+  position:absolute; top:16px; left:16px; z-index:2;
+  background:rgba(255,255,255,.9); color:var(--royal-deep); padding:6px 16px; border-radius:100px;
+  font-size:.65rem; letter-spacing:.18em; text-transform:uppercase; font-weight:600;
+}
+.event-body{ padding:34px 30px 38px; }
+.event-body h3{ font-size:1.5rem; margin-bottom:8px; }
+.event-body .addr{ font-family:var(--sans); font-size:.92rem; color:var(--ink-soft); margin-bottom:22px; }
+.event-actions{ display:flex; gap:12px; flex-wrap:wrap; }
+
+/* ============================= TIMELINE ============================= */
+#timeline{ background:linear-gradient(180deg, var(--royal-mist), var(--cream)); }
+.timeline-wrap{ position:relative; max-width:820px; margin:0 auto; }
+.timeline-wrap::before{
+  content:''; position:absolute; left:50%; top:0; bottom:0; width:2px;
+  background:linear-gradient(var(--gold), var(--royal-light)); transform:translateX(-50%);
+  opacity:.5;
+}
+@media (max-width:700px){ .timeline-wrap::before{ left:26px; } }
+.tl-item{ display:flex; justify-content:flex-end; padding-right:calc(50% + 34px); position:relative; margin-bottom:34px; }
+.tl-item:nth-child(even){ justify-content:flex-start; padding-right:0; padding-left:calc(50% + 34px); }
+@media (max-width:700px){
+  .tl-item, .tl-item:nth-child(even){ justify-content:flex-start; padding-left:66px; padding-right:0; }
+}
+.tl-dot{
+  position:absolute; left:50%; top:6px; transform:translateX(-50%);
+  width:16px; height:16px; border-radius:50%; background:var(--white);
+  border:2.5px solid var(--gold); box-shadow:0 0 0 5px rgba(198,166,100,.15);
+  display:flex; align-items:center; justify-content:center;
+}
+@media (max-width:700px){ .tl-dot{ left:26px; } }
+.tl-card{ max-width:340px; padding:22px 26px; }
+.tl-time{ color:var(--gold); font-weight:600; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:6px; }
+.tl-title{ font-size:1.12rem; display:flex; align-items:center; gap:10px; }
+.tl-title svg{ width:20px; height:20px; color:var(--royal-light); flex-shrink:0; }
+
+/* ============================= ENTOURAGE ============================= */
+#entourage{ background:var(--white); }
+.ent-block{ margin-bottom:64px; }
+.ent-block:last-child{ margin-bottom:0; }
+.ent-heading{ text-align:center; margin-bottom:34px; }
+.ent-heading h3{ font-size:1.4rem; }
+.ent-heading .sub{ font-family:var(--script); font-style:italic; color:var(--gold); font-size:1rem; }
+.ent-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+.ent-grid.two-col{ grid-template-columns:1fr 1fr; max-width:560px; margin:0 auto; }
+@media (max-width:560px){ .ent-grid.two-col{ grid-template-columns:1fr; } }
+.ent-card{
+  padding:26px 20px; text-align:center; transition:transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.ent-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-soft); }
+.ent-card .role{ font-size:.62rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; font-weight:600; }
+.ent-card .name{ font-family:var(--serif); font-size:1.02rem; color:var(--royal-deep); line-height:1.5; }
+.ent-parents-pair{ display:grid; grid-template-columns:1fr 1fr; gap:30px; max-width:760px; margin:0 auto; }
+@media (max-width:640px){ .ent-parents-pair{ grid-template-columns:1fr; } }
+.sponsors-grid{ grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+
+/* ============================= ATTIRE ============================= */
+#attire{ background:linear-gradient(180deg, var(--cream), var(--royal-mist)); }
+.attire-group{ margin-bottom:54px; }
+.attire-group:last-child{ margin-bottom:0; }
+.attire-group h3{ text-align:center; font-size:1.35rem; margin-bottom:30px; }
+.attire-row{ display:flex; flex-wrap:wrap; justify-content:center; gap:40px; }
+.attire-col{ text-align:center; }
+.attire-col .who{ font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--royal-light); margin-bottom:16px; font-weight:600; }
+.swatch-row{ display:flex; gap:14px; justify-content:center; }
+.swatch{ display:flex; flex-direction:column; align-items:center; gap:8px; }
+.swatch-color{
+  width:64px; height:64px; border-radius:50%; box-shadow:0 8px 20px -8px rgba(18,42,92,.35), inset 0 0 0 4px rgba(255,255,255,.7);
+  transition:transform .4s var(--ease);
+}
+.swatch:hover .swatch-color{ transform:scale(1.1) rotate(6deg); }
+.swatch-name{ font-size:.72rem; letter-spacing:.05em; color:var(--ink-soft); }
+
+/* ============================= GIFT GUIDE ============================= */
+#gift{ background:var(--white); text-align:center; }
+.gift-msg{ max-width:560px; margin:0 auto 50px; }
+.gift-msg p{ font-size:1.02rem; margin-bottom:14px; }
+.gift-msg p:first-child{ font-family:var(--script); font-style:italic; font-size:1.4rem; color:var(--royal-deep); }
+.gift-grid{ display:flex; gap:30px; justify-content:center; flex-wrap:wrap; }
+.gift-card{ width:260px; padding:34px 26px; text-align:center; }
+.gift-qr{
+  width:150px; height:150px; margin:0 auto 20px; border-radius:14px;
+  background:repeating-linear-gradient(45deg, var(--royal-mist), var(--royal-mist) 8px, #fff 8px, #fff 16px);
+  border:1.5px dashed var(--royal-light); display:flex; align-items:center; justify-content:center;
+  color:var(--royal-light); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; text-align:center; padding:10px;
+}
+.gift-name{ font-family:var(--serif); font-size:1.3rem; letter-spacing:.05em; color:var(--royal-deep); margin-bottom:4px; }
+.gift-sub{ font-size:.76rem; color:var(--ink-soft); }
+
+/* ============================= HASHTAG ============================= */
+#hashtag{
+  background:linear-gradient(135deg, var(--royal-deep), var(--royal-light));
+  text-align:center; padding:90px 0;
+}
+.hashtag-text{ font-family:var(--serif); font-size:clamp(1.5rem,4vw,2.4rem); color:var(--gold-bright); letter-spacing:.02em; margin-bottom:26px; word-break:break-word; }
+.hashtag-sub{ color:rgba(255,255,255,.75); margin-bottom:30px; }
+#copy-hashtag-msg{ display:block; margin-top:14px; color:var(--gold-bright); font-size:.78rem; letter-spacing:.05em; height:16px; opacity:0; transition:opacity .3s; }
+#copy-hashtag-msg.show{ opacity:1; }
+
+/* ============================= SHARE PHOTOS ============================= */
+#share-photos{ background:var(--cream); text-align:center; }
+.share-card{ max-width:640px; margin:0 auto; padding:56px 40px; text-align:center; }
+
+/* ============================= RSVP ============================= */
+#rsvp{ background:linear-gradient(180deg, var(--royal-mist), var(--cream)); }
+.rsvp-info{ text-align:center; margin-bottom:40px; }
+.rsvp-deadline{
+  display:inline-flex; flex-direction:column; align-items:center; gap:4px;
+  padding:18px 34px; border-radius:var(--radius-md); margin-bottom:20px;
+}
+.rsvp-deadline .lbl{ font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:600; }
+.rsvp-deadline .date{ font-family:var(--serif); font-size:1.4rem; color:var(--royal-deep); }
+.rsvp-note{ max-width:520px; margin:0 auto; font-size:.92rem; }
+.rsvp-frame-wrap{
+  position:relative; max-width:760px; margin:0 auto; border-radius:var(--radius-lg); overflow:hidden;
+  box-shadow:var(--shadow-soft); background:var(--white);
+  min-height:640px;
+}
+.rsvp-frame-wrap iframe{ width:100%; height:640px; border:0; display:block; position:relative; z-index:1; background:transparent; }
+.rsvp-loading{
+  position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px;
+  background:var(--white); transition:opacity .6s var(--ease), visibility .6s var(--ease);
+}
+.rsvp-loading.hide{ opacity:0; visibility:hidden; }
+.rsvp-spinner{ width:48px; height:48px; border-radius:50%; border:3px solid var(--royal-mist); border-top-color:var(--gold); animation:spin 1s linear infinite; }
+@keyframes spin{ to{ transform:rotate(360deg); } }
+.rsvp-loading span{ font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--royal-light); }
+
+/* ============================= GALLERY ============================= */
+#gallery{ background:var(--white); }
+.masonry{ columns:3 260px; column-gap:16px; }
+@media (max-width:640px){ .masonry{ columns:2 160px; } }
+.masonry-item{
+  break-inside:avoid; margin-bottom:16px; border-radius:var(--radius-sm); overflow:hidden; cursor:pointer;
+  position:relative; box-shadow:var(--shadow-card);
+}
+.masonry-item img{ width:100%; display:block; transition:transform .6s var(--ease); }
+.masonry-item:hover img{ transform:scale(1.08); }
+.masonry-item::after{
+  content:'\2726'; position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  color:var(--white); font-size:1.4rem; background:rgba(18,42,92,0); opacity:0; transition:all .4s var(--ease);
+}
+.masonry-item:hover::after{ background:rgba(18,42,92,.35); opacity:1; }
+#lightbox{
+  position:fixed; inset:0; background:rgba(10,16,32,.94); z-index:2000; display:none;
+  align-items:center; justify-content:center; padding:30px;
+}
+#lightbox.open{ display:flex; }
+#lightbox img{ max-width:90vw; max-height:85vh; border-radius:10px; box-shadow:0 30px 80px rgba(0,0,0,.5); }
+#lightbox .lb-close{ position:absolute; top:24px; right:30px; color:var(--white); font-size:2rem; line-height:1; }
+#lightbox .lb-nav{ position:absolute; top:50%; transform:translateY(-50%); color:var(--white); font-size:2rem; padding:10px 16px; }
+#lightbox .lb-prev{ left:10px; } #lightbox .lb-next{ right:10px; }
+
+/* ============================= FOOTER ============================= */
+footer{
+  background:var(--royal-deep); color:rgba(255,255,255,.8); text-align:center; padding:70px 0 34px;
+}
+.footer-monogram{ font-family:var(--serif); font-size:2rem; color:var(--gold-bright); margin-bottom:10px; }
+.footer-msg{ font-family:var(--script); font-style:italic; font-size:1.3rem; color:var(--white); margin-bottom:8px; }
+.footer-date{ font-size:.78rem; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.55); margin-bottom:34px; }
+.share-icons{ display:flex; justify-content:center; gap:16px; margin-bottom:40px; }
+.share-icons a{
+  width:42px; height:42px; border-radius:50%; border:1px solid rgba(230,199,126,.4);
+  display:flex; align-items:center; justify-content:center; color:var(--gold-bright); transition:all .35s var(--ease);
+}
+.share-icons a:hover{ background:var(--gold-bright); color:var(--royal-deep); transform:translateY(-3px); }
+.credit-line{ border-top:1px solid rgba(255,255,255,.12); padding-top:26px; font-size:.76rem; color:rgba(255,255,255,.5); letter-spacing:.03em; }
+.credit-line a{ color:var(--gold-bright); font-weight:500; }
+.credit-line a:hover{ text-decoration:underline; }
+
+/* utility */
+.sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+</style>
+</head>
+<body>
+
+<!-- ============================= PRELOADER ============================= -->
+<div id="preloader" aria-hidden="true">
+  <div class="seal">
+    <svg viewBox="0 0 150 150">
+      <circle class="seal-ring" cx="75" cy="75" r="70"></circle>
+      <text class="seal-monogram" x="75" y="88" text-anchor="middle">L&amp;R</text>
+    </svg>
+    <div class="preloader-label">Lance &amp; Rhoda</div>
+  </div>
+</div>
+
+<!-- ============================= NAV ============================= -->
+<header id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-crest">L<span>&amp;</span>R</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#our-story">Our Story</a></li>
+      <li><a href="#event-details">Event Details</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#entourage">Entourage</a></li>
+      <li><a href="#attire">Attire Guide</a></li>
+      <li><a href="#gift">Gift Guide</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#share-photos">Upload Photos</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ============================= HERO ============================= -->
+<section id="hero">
+  <div class="hero-monogram-bg" aria-hidden="true">
+    <svg viewBox="0 0 400 400" fill="none">
+      <circle cx="200" cy="200" r="188" stroke="#E6C77E" stroke-width="1"/>
+      <circle cx="200" cy="200" r="168" stroke="#E6C77E" stroke-width="1"/>
+      <text x="200" y="235" text-anchor="middle" font-family="Playfair Display, serif" font-size="150" fill="#E6C77E">L&amp;R</text>
+    </svg>
+  </div>
+  <div class="hero-sparkle" style="width:4px;height:4px;top:22%;left:18%;"></div>
+  <div class="hero-sparkle" style="width:3px;height:3px;top:65%;left:12%;animation-delay:1s;"></div>
+  <div class="hero-sparkle" style="width:5px;height:5px;top:30%;left:82%;animation-delay:2s;"></div>
+  <div class="hero-sparkle" style="width:3px;height:3px;top:70%;left:86%;animation-delay:.6s;"></div>
+  <div class="hero-sparkle" style="width:4px;height:4px;top:50%;left:50%;animation-delay:1.4s;"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Together With Their Families</div>
+    <h1 class="hero-names">Lance<span class="hero-amp">&amp;</span>Rhoda</h1>
+    <div class="hero-date">Saturday, <b>December 12, 2026</b></div>
+    <div class="hero-time">at half past three in the afternoon</div>
+    <div class="hero-cta">
+      <a href="#event-details" class="btn btn-gold">View Our Wedding</a>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+</section>
+
+<!-- ============================= COUNTDOWN ============================= -->
+<section id="countdown">
+  <div class="container">
+    <div class="countdown-label">Counting down to forever</div>
+    <div class="countdown-grid" id="countdown-grid" role="timer" aria-live="off">
+      <div class="countdown-unit"><div class="countdown-num" id="cd-days">00</div><div class="countdown-unit-label">Days</div></div>
+      <div class="countdown-unit"><div class="countdown-num" id="cd-hours">00</div><div class="countdown-unit-label">Hours</div></div>
+      <div class="countdown-unit"><div class="countdown-num" id="cd-minutes">00</div><div class="countdown-unit-label">Minutes</div></div>
+      <div class="countdown-unit"><div class="countdown-num" id="cd-seconds">00</div><div class="countdown-unit-label">Seconds</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= OUR STORY (placeholder) ============================= -->
+<section id="our-story" class="section" style="background:var(--white); text-align:center;">
+  <div class="container">
+    <span class="eyebrow reveal">Our Story</span>
+    <h2 class="section-title reveal">A Love Still Being Written</h2>
+    <div class="flourish reveal">
+      <div class="line"></div>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 5 6.5 5c2 0 3.5 1 5.5 3 2-2 3.5-3 5.5-3 3.5 0 6 3.5 4 7.5C19 16.65 12 21 12 21z"/></svg>
+      <div class="line r"></div>
+    </div>
+    <p class="reveal" style="max-width:520px; margin:0 auto;">The full story of how Lance and Rhoda found each other is coming soon &mdash; check back for the details of their journey together.</p>
+  </div>
+</section>
+
+<!-- ============================= EVENT DETAILS ============================= -->
+<section id="event-details" class="section">
+  <div class="container">
+    <span class="eyebrow reveal" style="display:block; text-align:center;">Join Us</span>
+    <h2 class="section-title reveal">Wedding Details</h2>
+    <p class="section-sub reveal">Two beautiful moments, one unforgettable celebration</p>
+
+    <div class="event-grid">
+      <div class="event-card glass reveal">
+        <div class="event-photo">
+          <span class="event-tag">Ceremony</span>
+          <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop" alt="Mt. Carmel Shrine church exterior placeholder" loading="lazy">
+        </div>
+        <div class="event-body">
+          <h3>Mt. Carmel Shrine</h3>
+          <p class="addr">New Manila, Quezon City</p>
+          <div class="event-actions">
+            <a class="btn btn-primary btn-sm" href="https://www.google.com/maps/search/?api=1&query=Mt.+Carmel+Shrine+New+Manila+Quezon+City" target="_blank" rel="noopener">View on Map</a>
+            <a class="btn btn-outline btn-sm" href="https://www.google.com/maps/dir/?api=1&destination=Mt.+Carmel+Shrine+New+Manila+Quezon+City" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-card glass reveal">
+        <div class="event-photo">
+          <span class="event-tag">Reception</span>
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Stalla Suites Events Place placeholder" loading="lazy">
+        </div>
+        <div class="event-body">
+          <h3>Stalla Suites Events Place</h3>
+          <p class="addr">Quezon City</p>
+          <div class="event-actions">
+            <a class="btn btn-primary btn-sm" href="https://www.google.com/maps/search/?api=1&query=Stalla+Suites+Events+Place+Quezon+City" target="_blank" rel="noopener">View on Map</a>
+            <a class="btn btn-outline btn-sm" href="https://www.google.com/maps/dir/?api=1&destination=Stalla+Suites+Events+Place+Quezon+City" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= TIMELINE ============================= -->
+<section id="timeline" class="section">
+  <div class="container">
+    <span class="eyebrow reveal" style="display:block; text-align:center;">The Program</span>
+    <h2 class="section-title reveal">Wedding Timeline</h2>
+    <p class="section-sub reveal">A day of love, laughter, and celebration</p>
+
+    <div class="timeline-wrap">
+      <div class="tl-item reveal">
+        <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#C6A664" stroke-width="2" width="9" height="9"><path d="M12 2v20M2 12h20"/></svg></div>
+        <div class="tl-card glass">
+          <div class="tl-time">3:30 PM</div>
+          <div class="tl-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/></svg>Wedding Ceremony</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <div class="tl-time">4:15 PM</div>
+          <div class="tl-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 21h8M12 17v4M7 4h10l-1 8a4 4 0 01-8 0z"/></svg>Cocktail Hour</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <div class="tl-time">5:00 PM</div>
+          <div class="tl-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V9l8-6 8 6v12M4 21h16M9 21v-6h6v6"/></svg>Reception Entrance &amp; Program</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <div class="tl-time">5:30 PM</div>
+          <div class="tl-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></svg>Words of Advice &amp; Toasts</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <div class="tl-time">6:00 PM</div>
+          <div class="tl-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c4-2 8-5.5 8-10a5 5 0 00-8-4 5 5 0 00-8 4c0 4.5 4 8 8 10z"/></svg>First Dance</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <div class="tl-time">6:20 PM</div>
+          <div class="tl-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 20h-4c0-3 2-4 2-7a4 4 0 00-8 0c0 3 2 4 2 7H5"/></svg>Parent Dances</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <div class="tl-time">6:45 PM</div>
+          <div class="tl-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10h18M5 10v8a2 2 0 002 2h10a2 2 0 002-2v-8M8 10V6a4 4 0 018 0v4"/></svg>Dinner</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <div class="tl-time">7:15 PM</div>
+          <div class="tl-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M8 13l3 2 5-4"/></svg>Same-Day Edit Screening</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <div class="tl-time">7:40 PM</div>
+          <div class="tl-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 1a3 3 0 00-3 3v7a3 3 0 006 0V4a3 3 0 00-3-3zM19 10v1a7 7 0 01-14 0v-1M12 18v4M9 22h6"/></svg>Speeches</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#C6A664" stroke-width="2" width="9" height="9"><path d="M12 2v20M2 12h20"/></svg></div>
+        <div class="tl-card glass">
+          <div class="tl-time">8:00 PM</div>
+          <div class="tl-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/></svg>Celebration Ends</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= ENTOURAGE ============================= -->
+<section id="entourage" class="section">
+  <div class="container">
+    <span class="eyebrow reveal" style="display:block; text-align:center;">With Gratitude</span>
+    <h2 class="section-title reveal">Wedding Entourage</h2>
+    <p class="section-sub reveal">The beloved family and friends standing beside us</p>
+
+    <div class="ent-block">
+      <div class="ent-parents-pair">
+        <div class="reveal">
+          <div class="ent-heading"><h3>Parents of the Groom</h3></div>
+          <div class="ent-grid two-col">
+            <div class="ent-card glass"><div class="name">John Cuaresma</div></div>
+            <div class="ent-card glass"><div class="name">Lolita Cuaresma</div></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="ent-heading"><h3>Parents of the Bride</h3></div>
+          <div class="ent-grid two-col">
+            <div class="ent-card glass"><div class="name">Rodrigo Astilla</div></div>
+            <div class="ent-card glass"><div class="name">&#10013; Fe Astilla</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent-block">
+      <div class="ent-heading reveal"><h3>Principal Sponsors</h3><div class="sub">Ninong &amp; Ninang</div></div>
+      <div class="ent-grid sponsors-grid reveal">
+        <div class="ent-card glass"><div class="name">Mr. Edilbert Mesa</div></div>
+        <div class="ent-card glass"><div class="name">Mr. Manuel La&ntilde;a</div></div>
+        <div class="ent-card glass"><div class="name">Mr. Kenneth Arroyo</div></div>
+        <div class="ent-card glass"><div class="name">Mr. Guillarado Vicu&ntilde;a</div></div>
+        <div class="ent-card glass"><div class="name">Engr. Potenciano Ramos</div></div>
+        <div class="ent-card glass"><div class="name">Mr. Jayson Lago</div></div>
+        <div class="ent-card glass"><div class="name">Ms. Imelda Ragual</div></div>
+        <div class="ent-card glass"><div class="name">Mrs. Florinda Dayao</div></div>
+        <div class="ent-card glass"><div class="name">Mrs. Marsha Arroyo</div></div>
+        <div class="ent-card glass"><div class="name">Mrs. Maria Rosario Lagado</div></div>
+        <div class="ent-card glass"><div class="name">Dra. Karen Baldivino</div></div>
+        <div class="ent-card glass"><div class="name">Mrs. Zenaida Buenafe</div></div>
+      </div>
+    </div>
+
+    <div class="ent-block">
+      <div class="ent-parents-pair">
+        <div class="reveal">
+          <div class="ent-heading"><h3>Best Man</h3></div>
+          <div class="ent-grid"><div class="ent-card glass"><div class="name">Melvin Quioyo</div></div></div>
+        </div>
+        <div class="reveal">
+          <div class="ent-heading"><h3>Maid of Honor</h3></div>
+          <div class="ent-grid"><div class="ent-card glass"><div class="name">Racial Ann Astilla Reyes</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent-block">
+      <div class="ent-parents-pair">
+        <div class="reveal">
+          <div class="ent-heading"><h3>Groomsmen</h3></div>
+          <div class="ent-grid two-col">
+            <div class="ent-card glass"><div class="name">Michael Renz Dela Pe&ntilde;a</div></div>
+            <div class="ent-card glass"><div class="name">Raymund Astilla</div></div>
+            <div class="ent-card glass"><div class="name">Kier Vincent Pura</div></div>
+            <div class="ent-card glass"><div class="name">Jason Pereda</div></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="ent-heading"><h3>Bridesmaids</h3></div>
+          <div class="ent-grid two-col">
+            <div class="ent-card glass"><div class="name">Chermibelle Vicedo</div></div>
+            <div class="ent-card glass"><div class="name">Sandae Anne Ramos</div></div>
+            <div class="ent-card glass"><div class="name">Mary Fe Encomio Mangubat</div></div>
+            <div class="ent-card glass"><div class="name">Allyssa Grace Lopez</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent-block">
+      <div class="ent-heading reveal"><h3>Special Sponsors</h3></div>
+      <div class="ent-parents-pair reveal">
+        <div>
+          <div class="ent-heading"><h3 style="font-size:1.05rem;">Candle Sponsors</h3></div>
+          <div class="ent-grid two-col">
+            <div class="ent-card glass"><div class="name">Rodel John Astilla</div></div>
+            <div class="ent-card glass"><div class="name">Cyrylle Cuaresma</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="ent-heading"><h3 style="font-size:1.05rem;">Veil Sponsors</h3></div>
+          <div class="ent-grid two-col">
+            <div class="ent-card glass"><div class="name">Lawrence Querubin</div></div>
+            <div class="ent-card glass"><div class="name">Anna Margarita Louis</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="ent-parents-pair reveal" style="margin-top:20px;">
+        <div>
+          <div class="ent-heading"><h3 style="font-size:1.05rem;">Cord Sponsors</h3></div>
+          <div class="ent-grid two-col">
+            <div class="ent-card glass"><div class="name">Oljon King Dela Cruz</div></div>
+            <div class="ent-card glass"><div class="name">Armi Rizzi Negado</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="ent-heading"><h3 style="font-size:1.05rem;">Flower Girls</h3></div>
+          <div class="ent-grid two-col">
+            <div class="ent-card glass"><div class="name">Chloe Buenafe</div></div>
+            <div class="ent-card glass"><div class="name">Atasha Vienna Vicedo</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ent-block">
+      <div class="ent-heading reveal"><h3>Little Ones of Honor</h3></div>
+      <div class="ent-grid sponsors-grid reveal" style="max-width:820px; margin:0 auto;">
+        <div class="ent-card glass"><div class="role">Bible Bearer</div><div class="name">Jose Gabriel Ragual</div></div>
+        <div class="ent-card glass"><div class="role">Coin Bearer</div><div class="name">Juan Miguel Ragual</div></div>
+        <div class="ent-card glass"><div class="role">Ring Bearer</div><div class="name">I&ntilde;igo Rocher Vicedo</div></div>
+        <div class="ent-card glass"><div class="role">Banner Bearer</div><div class="name">Raizen Lyndon Astilla</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= ATTIRE ============================= -->
+<section id="attire" class="section">
+  <div class="container">
+    <span class="eyebrow reveal" style="display:block; text-align:center;">Dress Code</span>
+    <h2 class="section-title reveal">Wedding Attire Guide</h2>
+    <p class="section-sub reveal">Royal blue and beige, for a coordinated and elegant celebration</p>
+
+    <div class="attire-group reveal">
+      <h3>Guests</h3>
+      <div class="attire-row">
+        <div class="attire-col">
+          <div class="who">Female</div>
+          <div class="swatch-row">
+            <div class="swatch"><div class="swatch-color" style="background:#1E3D77;"></div><div class="swatch-name">Blue Tones</div></div>
+            <div class="swatch"><div class="swatch-color" style="background:#E7DCC7;"></div><div class="swatch-name">Beige</div></div>
+          </div>
+        </div>
+        <div class="attire-col">
+          <div class="who">Male</div>
+          <div class="swatch-row">
+            <div class="swatch"><div class="swatch-color" style="background:#1E3D77;"></div><div class="swatch-name">Blue Tones</div></div>
+            <div class="swatch"><div class="swatch-color" style="background:#E7DCC7;"></div><div class="swatch-name">Beige</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attire-group reveal">
+      <h3>Principal Sponsors</h3>
+      <div class="attire-row">
+        <div class="attire-col">
+          <div class="who">Godmothers</div>
+          <div class="swatch-row"><div class="swatch"><div class="swatch-color" style="background:#E7DCC7;"></div><div class="swatch-name">Beige</div></div></div>
+        </div>
+        <div class="attire-col">
+          <div class="who">Godfathers</div>
+          <div class="swatch-row">
+            <div class="swatch"><div class="swatch-color" style="background:#1A1A2E;"></div><div class="swatch-name">Black</div></div>
+            <div class="swatch"><div class="swatch-color" style="background:#E7DCC7;"></div><div class="swatch-name">Beige</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attire-group reveal">
+      <h3>Secondary Sponsors</h3>
+      <div class="attire-row">
+        <div class="attire-col">
+          <div class="who">Maid of Honor</div>
+          <div class="swatch-row"><div class="swatch"><div class="swatch-color" style="background:#1E3D77;"></div><div class="swatch-name">Royal Blue</div></div></div>
+        </div>
+        <div class="attire-col">
+          <div class="who">Bridesmaids</div>
+          <div class="swatch-row"><div class="swatch"><div class="swatch-color" style="background:#1E3D77;"></div><div class="swatch-name">Royal Blue</div></div></div>
+        </div>
+        <div class="attire-col">
+          <div class="who">Best Man &amp; Groomsmen</div>
+          <div class="swatch-row">
+            <div class="swatch"><div class="swatch-color" style="background:#1E3D77;"></div><div class="swatch-name">Royal Blue</div></div>
+            <div class="swatch"><div class="swatch-color" style="background:#E7DCC7;"></div><div class="swatch-name">Beige</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= GIFT GUIDE ============================= -->
+<section id="gift" class="section">
+  <div class="container">
+    <span class="eyebrow reveal">Gift Guide</span>
+    <div class="gift-msg reveal">
+      <p>Your presence is the greatest gift of all.</p>
+      <p>However, should you wish to bless us with a gift, a contribution toward our future together would be sincerely appreciated.</p>
+    </div>
+    <div class="gift-grid">
+      <div class="gift-card glass reveal">
+        <div class="gift-qr">QR Code Placeholder</div>
+        <div class="gift-name">GCash</div>
+        <div class="gift-sub">Scan to send your gift</div>
+      </div>
+      <div class="gift-card glass reveal">
+        <div class="gift-qr">QR Code Placeholder</div>
+        <div class="gift-name">GoTyme</div>
+        <div class="gift-sub">Scan to send your gift</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= HASHTAG ============================= -->
+<section id="hashtag">
+  <div class="container">
+    <div class="hashtag-sub">Share your moments with our wedding hashtag</div>
+    <div class="hashtag-text">#WaLANCEhangganNiRHODA</div>
+    <button class="btn btn-gold" id="copy-hashtag-btn">Copy Hashtag</button>
+    <span id="copy-hashtag-msg">Copied to clipboard!</span>
+  </div>
+</section>
+
+<!-- ============================= SHARE PHOTOS ============================= -->
+<section id="share-photos" class="section">
+  <div class="container">
+    <div class="share-card glass reveal">
+      <span class="eyebrow">Memories</span>
+      <h2 class="section-title" style="font-size:2rem;">Share Your Photos</h2>
+      <p style="margin:16px 0 30px;">Captured a beautiful moment from our celebration? We'd love to see it &mdash; help us collect every memory from our special day.</p>
+      <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1hBeN8rHobKkkCrcGNh0WBto6NJdQpG5Q" target="_blank" rel="noopener">Upload Your Photos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= RSVP ============================= -->
+<section id="rsvp" class="section">
+  <div class="container">
+    <span class="eyebrow reveal" style="display:block; text-align:center;">Kindly Respond</span>
+    <h2 class="section-title reveal">RSVP</h2>
+    <div class="rsvp-info reveal">
+      <div class="rsvp-deadline glass">
+        <div class="lbl">RSVP Deadline</div>
+        <div class="date">November 15, 2026</div>
+      </div>
+      <p class="rsvp-note">We kindly ask that you respond on or before November 15, 2026, so we can finalize our seating arrangements.</p>
+    </div>
+
+    <div class="rsvp-frame-wrap reveal">
+      <div class="rsvp-loading" id="rsvp-loading">
+        <div class="rsvp-spinner"></div>
+        <span>Loading RSVP Form&hellip;</span>
+      </div>
+      <iframe id="rsvp-iframe" title="Wedding RSVP Form" src="https://script.google.com/macros/s/AKfycby6x5gs8tHEXTQM_iFAW8qYt78_6Sczt9_O8jAuV_GxM8ZMOu3gOdpYHXowlADosvqYaA/exec" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= GALLERY ============================= -->
+<section id="gallery" class="section">
+  <div class="container">
+    <span class="eyebrow reveal" style="display:block; text-align:center;">Memories</span>
+    <h2 class="section-title reveal">Gallery</h2>
+    <p class="section-sub reveal">A glimpse into our engagement and prenup moments</p>
+
+    <div class="masonry reveal" id="masonry">
+      <div class="masonry-item"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop" alt="Engagement photo placeholder 1" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600&auto=format&fit=crop" alt="Prenup photo placeholder 2" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600&auto=format&fit=crop" alt="Engagement photo placeholder 3" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://images.unsplash.com/photo-1583939411023-14b9a4bcd0c9?q=80&w=600&auto=format&fit=crop" alt="Prenup photo placeholder 4" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?q=80&w=600&auto=format&fit=crop" alt="Engagement photo placeholder 5" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=600&auto=format&fit=crop" alt="Prenup photo placeholder 6" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<div id="lightbox">
+  <button class="lb-close" aria-label="Close gallery">&times;</button>
+  <button class="lb-nav lb-prev" aria-label="Previous photo">&#8249;</button>
+  <img src="" alt="">
+  <button class="lb-nav lb-next" aria-label="Next photo">&#8250;</button>
+</div>
+
+<!-- ============================= FOOTER ============================= -->
+<footer>
+  <div class="container">
+    <div class="footer-monogram">L &amp; R</div>
+    <div class="footer-msg">Thank you for celebrating with us.</div>
+    <div class="footer-date">Lance &amp; Rhoda &middot; December 12, 2026</div>
+    <div class="share-icons">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener" aria-label="Share on Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg>
+      </a>
+      <a href="https://www.messenger.com/" target="_blank" rel="noopener" aria-label="Share on Messenger">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.3S17.5 2 12 2zm1 12.5l-2.5-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7z"/></svg>
+      </a>
+      <a href="https://wa.me/?text=" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1.2-.2.9-1 1.1-1.3.2-.3.4-.2.7-.1.3.1 1.9.9 2.2 1 .3.2.5.2.6.4.1.2.1.9-.1 1.6z"/></svg>
+      </a>
+    </div>
+    <div class="credit-line">
+      Created by <a href="https://tiktok.com/@loveanne.ph" target="_blank" rel="noopener">Love, Anne</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Preloader ---------- */
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      document.getElementById('preloader').classList.add('hide');
+    }, 2100);
+  });
+
+  /* ---------- Nav scroll state + mobile menu ---------- */
+  var navbar = document.getElementById('navbar');
+  var hamburger = document.getElementById('hamburger');
+  var navLinks = document.getElementById('nav-links');
+
+  function onScroll(){
+    if(window.scrollY > 60){ navbar.classList.add('scrolled'); }
+    else{ navbar.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  hamburger.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active', open);
+    hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded','false');
+    });
+  });
+
+  /* ---------- Scroll reveal ---------- */
+  var revealEls = document.querySelectorAll('.reveal, .reveal-scale');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15, rootMargin:'0px 0px -60px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- Countdown ---------- */
+  var weddingDate = new Date('2026-12-12T15:30:00+08:00').getTime();
+  var dEl = document.getElementById('cd-days'),
+      hEl = document.getElementById('cd-hours'),
+      mEl = document.getElementById('cd-minutes'),
+      sEl = document.getElementById('cd-seconds');
+
+  function pad(n){ return String(n).padStart(2,'0'); }
+
+  function tick(){
+    var now = Date.now();
+    var diff = weddingDate - now;
+    if(diff <= 0){
+      dEl.textContent = hEl.textContent = mEl.textContent = sEl.textContent = '00';
+      return;
+    }
+    var days = Math.floor(diff / 86400000);
+    var hours = Math.floor((diff % 86400000) / 3600000);
+    var mins = Math.floor((diff % 3600000) / 60000);
+    var secs = Math.floor((diff % 60000) / 1000);
+    dEl.textContent = pad(days);
+    hEl.textContent = pad(hours);
+    mEl.textContent = pad(mins);
+    sEl.textContent = pad(secs);
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  /* ---------- Copy hashtag ---------- */
+  var copyBtn = document.getElementById('copy-hashtag-btn');
+  var copyMsg = document.getElementById('copy-hashtag-msg');
+  copyBtn.addEventListener('click', function(){
+    var text = '#WaLANCEhangganNiRHODA';
+    function shown(){
+      copyMsg.classList.add('show');
+      setTimeout(function(){ copyMsg.classList.remove('show'); }, 2200);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(shown).catch(function(){
+        fallbackCopy(text); shown();
+      });
+    } else {
+      fallbackCopy(text); shown();
+    }
+  });
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.focus(); ta.select();
+    try{ document.execCommand('copy'); }catch(e){}
+    document.body.removeChild(ta);
+  }
+
+  /* ---------- RSVP iframe loading ---------- */
+  var rsvpFrame = document.getElementById('rsvp-iframe');
+  var rsvpLoading = document.getElementById('rsvp-loading');
+  var rsvpHidden = false;
+  function hideRsvpLoading(){
+    if(rsvpHidden) return;
+    rsvpHidden = true;
+    rsvpLoading.classList.add('hide');
+  }
+  rsvpFrame.addEventListener('load', hideRsvpLoading);
+  setTimeout(hideRsvpLoading, 6000); // safety fallback
+
+  /* ---------- Gallery lightbox ---------- */
+  var masonryItems = Array.prototype.slice.call(document.querySelectorAll('.masonry-item img'));
+  var lightbox = document.getElementById('lightbox');
+  var lbImg = lightbox.querySelector('img');
+  var lbClose = lightbox.querySelector('.lb-close');
+  var lbPrev = lightbox.querySelector('.lb-prev');
+  var lbNext = lightbox.querySelector('.lb-next');
+  var currentIndex = 0;
+
+  function openLightbox(i){
+    currentIndex = i;
+    lbImg.src = masonryItems[i].src;
+    lbImg.alt = masonryItems[i].alt;
+    lightbox.classList.add('open');
+  }
+  function closeLightbox(){ lightbox.classList.remove('open'); }
+  function showRelative(delta){
+    currentIndex = (currentIndex + delta + masonryItems.length) % masonryItems.length;
+    lbImg.src = masonryItems[currentIndex].src;
+    lbImg.alt = masonryItems[currentIndex].alt;
+  }
+  masonryItems.forEach(function(img, i){
+    img.parentElement.addEventListener('click', function(){ openLightbox(i); });
+  });
+  lbClose.addEventListener('click', closeLightbox);
+  lbPrev.addEventListener('click', function(){ showRelative(-1); });
+  lbNext.addEventListener('click', function(){ showRelative(1); });
+  lightbox.addEventListener('click', function(e){ if(e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', function(e){
+    if(!lightbox.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowLeft') showRelative(-1);
+    if(e.key === 'ArrowRight') showRelative(1);
+  });
+
+})();
+</script>
+</body>
+</html>
