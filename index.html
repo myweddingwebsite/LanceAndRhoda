@@ -35,7 +35,7 @@
   --sans:'Poppins', sans-serif;
   --ease:cubic-bezier(.22,.61,.36,1);
 }
- 
+
 *,*::before,*::after{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 @media (prefers-reduced-motion: reduce){
@@ -212,6 +212,7 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
 }
 .hero-names{
   font-family:var(--serif); font-weight:600; font-size:clamp(3rem,9vw,6.2rem); line-height:1.05;
+  color:var(--beige);
   opacity:0; animation:heroFade 1s var(--ease) forwards .5s;
 }
 .hero-amp{
@@ -223,15 +224,12 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
   color:rgba(255,255,255,.9); opacity:0; animation:heroFade 1s var(--ease) forwards .8s;
 }
 .hero-date b{ color:var(--gold-bright); font-weight:600; }
-.hero-time{
-  margin-top:6px; font-family:var(--script); font-style:italic; font-size:1.15rem; color:rgba(255,255,255,.8);
-  opacity:0; animation:heroFade 1s var(--ease) forwards 1s;
-}
 .hero-cta{ margin-top:48px; opacity:0; animation:heroFade 1s var(--ease) forwards 1.25s; }
 @keyframes heroFade{ from{opacity:0; transform:translateY(22px);} to{opacity:1; transform:translateY(0);} }
 .scroll-cue{
-  position:absolute; bottom:34px; left:50%; transform:translateX(-50%); z-index:2;
+  position:absolute; bottom:34px; left:0; right:0; margin:0 auto; width:fit-content; z-index:2;
   color:rgba(255,255,255,.7); display:flex; flex-direction:column; align-items:center; gap:8px;
+  text-align:center;
   font-size:.65rem; letter-spacing:.3em; text-transform:uppercase;
   opacity:0; animation:heroFade 1s var(--ease) forwards 1.5s;
 }
@@ -244,14 +242,20 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
   padding:70px 0; text-align:center;
 }
 .countdown-label{ color:var(--gold-bright); letter-spacing:.35em; text-transform:uppercase; font-size:.72rem; margin-bottom:30px; }
-.countdown-grid{ display:flex; justify-content:center; gap:18px; flex-wrap:wrap; }
+.countdown-grid{ display:flex; justify-content:center; gap:18px; flex-wrap:nowrap; }
 .countdown-unit{
-  min-width:100px; padding:22px 10px;
+  min-width:100px; padding:22px 10px; flex:1 1 0;
   background:rgba(255,255,255,.06); border:1px solid rgba(230,199,126,.28);
   border-radius:var(--radius-md);
 }
 .countdown-num{ font-family:var(--serif); font-size:clamp(1.8rem,4vw,2.8rem); color:var(--white); font-variant-numeric:tabular-nums; }
 .countdown-unit-label{ margin-top:6px; font-size:.65rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.65); }
+@media (max-width:520px){
+  .countdown-grid{ gap:8px; }
+  .countdown-unit{ min-width:0; padding:14px 4px; border-radius:var(--radius-sm); }
+  .countdown-num{ font-size:clamp(1.2rem,6vw,1.8rem); }
+  .countdown-unit-label{ font-size:.52rem; letter-spacing:.08em; }
+}
 
 /* ============================= DECOR DIVIDER ============================= */
 .flourish{ display:flex; align-items:center; justify-content:center; gap:14px; margin:0 auto 50px; width:fit-content; }
@@ -273,10 +277,10 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
   background:rgba(255,255,255,.9); color:var(--royal-deep); padding:6px 16px; border-radius:100px;
   font-size:.65rem; letter-spacing:.18em; text-transform:uppercase; font-weight:600;
 }
-.event-body{ padding:34px 30px 38px; }
+.event-body{ padding:34px 30px 38px; text-align:center; }
 .event-body h3{ font-size:1.5rem; margin-bottom:8px; }
 .event-body .addr{ font-family:var(--sans); font-size:.92rem; color:var(--ink-soft); margin-bottom:22px; }
-.event-actions{ display:flex; gap:12px; flex-wrap:wrap; }
+.event-actions{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
 
 /* ============================= TIMELINE ============================= */
 #timeline{ background:linear-gradient(180deg, var(--royal-mist), var(--cream)); }
@@ -323,6 +327,8 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
 .ent-parents-pair{ display:grid; grid-template-columns:1fr 1fr; gap:30px; max-width:760px; margin:0 auto; }
 @media (max-width:640px){ .ent-parents-pair{ grid-template-columns:1fr; } }
 .sponsors-grid{ grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+.principal-two-col{ grid-template-columns:1fr 1fr !important; max-width:640px; margin:0 auto; }
+@media (max-width:480px){ .principal-two-col{ gap:12px; } .principal-two-col .ent-card{ padding:18px 10px; } }
 
 /* ============================= ATTIRE ============================= */
 #attire{ background:linear-gradient(180deg, var(--cream), var(--royal-mist)); }
@@ -350,10 +356,11 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
 .gift-card{ width:260px; padding:34px 26px; text-align:center; }
 .gift-qr{
   width:150px; height:150px; margin:0 auto 20px; border-radius:14px;
-  background:repeating-linear-gradient(45deg, var(--royal-mist), var(--royal-mist) 8px, #fff 8px, #fff 16px);
-  border:1.5px dashed var(--royal-light); display:flex; align-items:center; justify-content:center;
-  color:var(--royal-light); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; text-align:center; padding:10px;
+  overflow:hidden; border:1.5px solid var(--royal-mist);
+  box-shadow:0 8px 20px -10px rgba(18,42,92,.3);
+  display:flex; align-items:center; justify-content:center; background:var(--white);
 }
+.gift-qr img{ width:100%; height:100%; object-fit:cover; }
 .gift-name{ font-family:var(--serif); font-size:1.3rem; letter-spacing:.05em; color:var(--royal-deep); margin-bottom:4px; }
 .gift-sub{ font-size:.76rem; color:var(--ink-soft); }
 
@@ -464,7 +471,6 @@ footer{
     </button>
     <ul class="nav-links" id="nav-links">
       <li><a href="#hero">Home</a></li>
-      <li><a href="#our-story">Our Story</a></li>
       <li><a href="#event-details">Event Details</a></li>
       <li><a href="#timeline">Timeline</a></li>
       <li><a href="#entourage">Entourage</a></li>
@@ -496,7 +502,6 @@ footer{
     <div class="hero-eyebrow">Together With Their Families</div>
     <h1 class="hero-names">Lance<span class="hero-amp">&amp;</span>Rhoda</h1>
     <div class="hero-date">Saturday, <b>December 12, 2026</b></div>
-    <div class="hero-time">at half past three in the afternoon</div>
     <div class="hero-cta">
       <a href="#event-details" class="btn btn-gold">View Our Wedding</a>
     </div>
@@ -521,20 +526,6 @@ footer{
   </div>
 </section>
 
-<!-- ============================= OUR STORY (placeholder) ============================= -->
-<section id="our-story" class="section" style="background:var(--white); text-align:center;">
-  <div class="container">
-    <span class="eyebrow reveal">Our Story</span>
-    <h2 class="section-title reveal">A Love Still Being Written</h2>
-    <div class="flourish reveal">
-      <div class="line"></div>
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 5 6.5 5c2 0 3.5 1 5.5 3 2-2 3.5-3 5.5-3 3.5 0 6 3.5 4 7.5C19 16.65 12 21 12 21z"/></svg>
-      <div class="line r"></div>
-    </div>
-    <p class="reveal" style="max-width:520px; margin:0 auto;">The full story of how Lance and Rhoda found each other is coming soon &mdash; check back for the details of their journey together.</p>
-  </div>
-</section>
-
 <!-- ============================= EVENT DETAILS ============================= -->
 <section id="event-details" class="section">
   <div class="container">
@@ -553,7 +544,6 @@ footer{
           <p class="addr">New Manila, Quezon City</p>
           <div class="event-actions">
             <a class="btn btn-primary btn-sm" href="https://www.google.com/maps/search/?api=1&query=Mt.+Carmel+Shrine+New+Manila+Quezon+City" target="_blank" rel="noopener">View on Map</a>
-            <a class="btn btn-outline btn-sm" href="https://www.google.com/maps/dir/?api=1&destination=Mt.+Carmel+Shrine+New+Manila+Quezon+City" target="_blank" rel="noopener">Get Directions</a>
           </div>
         </div>
       </div>
@@ -568,7 +558,6 @@ footer{
           <p class="addr">Quezon City</p>
           <div class="event-actions">
             <a class="btn btn-primary btn-sm" href="https://www.google.com/maps/search/?api=1&query=Stalla+Suites+Events+Place+Quezon+City" target="_blank" rel="noopener">View on Map</a>
-            <a class="btn btn-outline btn-sm" href="https://www.google.com/maps/dir/?api=1&destination=Stalla+Suites+Events+Place+Quezon+City" target="_blank" rel="noopener">Get Directions</a>
           </div>
         </div>
       </div>
@@ -686,7 +675,7 @@ footer{
 
     <div class="ent-block">
       <div class="ent-heading reveal"><h3>Principal Sponsors</h3><div class="sub">Ninong &amp; Ninang</div></div>
-      <div class="ent-grid sponsors-grid reveal">
+      <div class="ent-grid sponsors-grid principal-two-col reveal">
         <div class="ent-card glass"><div class="name">Mr. Edilbert Mesa</div></div>
         <div class="ent-card glass"><div class="name">Mr. Manuel La&ntilde;a</div></div>
         <div class="ent-card glass"><div class="name">Mr. Kenneth Arroyo</div></div>
@@ -863,12 +852,12 @@ footer{
     </div>
     <div class="gift-grid">
       <div class="gift-card glass reveal">
-        <div class="gift-qr">QR Code Placeholder</div>
+        <div class="gift-qr"><img src="https://raw.githubusercontent.com/myweddingwebsite/LanceAndRhoda/refs/heads/main/gcash%20qr.jpg" alt="GCash QR code" loading="lazy"></div>
         <div class="gift-name">GCash</div>
         <div class="gift-sub">Scan to send your gift</div>
       </div>
       <div class="gift-card glass reveal">
-        <div class="gift-qr">QR Code Placeholder</div>
+        <div class="gift-qr"><img src="https://raw.githubusercontent.com/myweddingwebsite/LanceAndRhoda/refs/heads/main/gotyme%20qr.jpg" alt="GoTyme QR code" loading="lazy"></div>
         <div class="gift-name">GoTyme</div>
         <div class="gift-sub">Scan to send your gift</div>
       </div>
@@ -952,17 +941,6 @@ footer{
     <div class="footer-monogram">L &amp; R</div>
     <div class="footer-msg">Thank you for celebrating with us.</div>
     <div class="footer-date">Lance &amp; Rhoda &middot; December 12, 2026</div>
-    <div class="share-icons">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener" aria-label="Share on Facebook">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg>
-      </a>
-      <a href="https://www.messenger.com/" target="_blank" rel="noopener" aria-label="Share on Messenger">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.3S17.5 2 12 2zm1 12.5l-2.5-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7z"/></svg>
-      </a>
-      <a href="https://wa.me/?text=" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1.2-.2.9-1 1.1-1.3.2-.3.4-.2.7-.1.3.1 1.9.9 2.2 1 .3.2.5.2.6.4.1.2.1.9-.1 1.6z"/></svg>
-      </a>
-    </div>
     <div class="credit-line">
       Created by <a href="https://tiktok.com/@loveanne.ph" target="_blank" rel="noopener">Love, Anne</a>
     </div>
