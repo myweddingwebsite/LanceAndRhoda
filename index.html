@@ -13,8 +13,8 @@
 <style>
 /* ============================= TOKENS ============================= */
 :root{
-  --royal-deep:#122A5C;
-  --royal:#1E3D77;
+  --royal-deep:#0C1F4A;
+  --royal:#173C7D;
   --royal-light:#2E56A0;
   --royal-mist:#EEF2FA;
   --gold:#C6A664;
@@ -238,7 +238,13 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
 
 /* ============================= COUNTDOWN ============================= */
 #countdown{
-  background:linear-gradient(180deg, var(--royal-deep), var(--royal));
+  position:relative;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(230,199,126,.14), transparent 55%),
+    radial-gradient(circle at 85% 85%, rgba(46,86,160,.5), transparent 60%),
+    linear-gradient(160deg, var(--royal-deep), var(--royal) 65%, var(--royal-deep));
+  border-top:1px solid rgba(230,199,126,.22);
+  border-bottom:1px solid rgba(230,199,126,.22);
   padding:70px 0; text-align:center;
 }
 .countdown-label{ color:var(--gold-bright); letter-spacing:.35em; text-transform:uppercase; font-size:.72rem; margin-bottom:30px; }
@@ -371,7 +377,13 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
 
 /* ============================= HASHTAG ============================= */
 #hashtag{
-  background:linear-gradient(135deg, var(--royal-deep), var(--royal-light));
+  position:relative;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(230,199,126,.14), transparent 55%),
+    radial-gradient(circle at 15% 80%, rgba(46,86,160,.5), transparent 60%),
+    linear-gradient(135deg, var(--royal-deep), var(--royal) 55%, var(--royal-light));
+  border-top:1px solid rgba(230,199,126,.22);
+  border-bottom:1px solid rgba(230,199,126,.22);
   text-align:center; padding:90px 0;
 }
 .hashtag-text{ font-family:var(--serif); font-size:clamp(1.1rem,6vw,2.4rem); color:var(--gold-bright); letter-spacing:.01em; margin-bottom:26px; white-space:nowrap; }
@@ -409,6 +421,20 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
 @keyframes spin{ to{ transform:rotate(360deg); } }
 .rsvp-loading span{ font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--royal-light); }
 
+/* ============================= FAQ ============================= */
+#faq{ background:var(--white); }
+.faq-list{ max-width:740px; margin:0 auto; display:flex; flex-direction:column; gap:16px; }
+.faq-item{ overflow:hidden; transition:box-shadow .4s var(--ease); }
+.faq-question{
+  width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px;
+  padding:24px 28px; text-align:left; font-family:var(--serif); font-size:1.08rem; color:var(--royal-deep);
+}
+.faq-icon{ width:20px; height:20px; color:var(--gold); flex-shrink:0; transition:transform .45s var(--ease); }
+.faq-item.open .faq-icon{ transform:rotate(180deg); }
+.faq-answer{ max-height:0; overflow:hidden; transition:max-height .5s var(--ease); }
+.faq-answer-inner{ padding:0 28px 24px; }
+.faq-answer-inner p{ font-size:.94rem; }
+
 /* ============================= GALLERY ============================= */
 #gallery{ background:var(--white); }
 .masonry{ columns:3 260px; column-gap:16px; }
@@ -436,7 +462,13 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
 
 /* ============================= FOOTER ============================= */
 footer{
-  background:var(--royal-deep); color:rgba(255,255,255,.8); text-align:center; padding:70px 0 34px;
+  position:relative;
+  background:
+    radial-gradient(circle at 25% 10%, rgba(230,199,126,.12), transparent 55%),
+    radial-gradient(circle at 90% 90%, rgba(46,86,160,.45), transparent 60%),
+    linear-gradient(180deg, var(--royal-deep), var(--royal) 60%, var(--royal-deep));
+  border-top:1px solid rgba(230,199,126,.22);
+  color:rgba(255,255,255,.8); text-align:center; padding:70px 0 34px;
 }
 .footer-monogram{ font-family:var(--serif); font-size:2rem; color:var(--gold-bright); margin-bottom:10px; }
 .footer-msg{ font-family:var(--script); font-style:italic; font-size:1.3rem; color:var(--white); margin-bottom:8px; }
@@ -483,6 +515,7 @@ footer{
       <li><a href="#attire">Attire Guide</a></li>
       <li><a href="#gift">Gift Guide</a></li>
       <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#share-photos">Upload Photos</a></li>
       <li><a href="#rsvp">RSVP</a></li>
     </ul>
@@ -911,7 +944,7 @@ footer{
         <div class="rsvp-spinner"></div>
         <span>Loading RSVP Form&hellip;</span>
       </div>
-      <iframe id="rsvp-iframe" title="Wedding RSVP Form" src="https://script.google.com/macros/s/AKfycby6x5gs8tHEXTQM_iFAW8qYt78_6Sczt9_O8jAuV_GxM8ZMOu3gOdpYHXowlADosvqYaA/exec" loading="lazy"></iframe>
+      <iframe id="rsvp-iframe" title="Wedding RSVP Form" src="https://script.google.com/macros/s/AKfycbx4Qj5FYjN9hXIW68y2Xv6d6_ybkWtCrzgdtcGK7XJsUnBx2xY3H41pRYAggXVvAi5Rcw/exec" loading="lazy"></iframe>
     </div>
   </div>
 </section>
@@ -940,6 +973,65 @@ footer{
   <img src="" alt="">
   <button class="lb-nav lb-next" aria-label="Next photo">&#8250;</button>
 </div>
+
+<!-- ============================= FAQ ============================= -->
+<section id="faq" class="section">
+  <div class="container">
+    <span class="eyebrow reveal" style="display:block; text-align:center;">Good to Know</span>
+    <h2 class="section-title reveal">Frequently Asked Questions</h2>
+    <p class="section-sub reveal">A few answers before the big day</p>
+
+    <div class="faq-list">
+      <div class="faq-item glass reveal">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can I bring Children?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>This will be an adults-only celebration. Only children who are part of the entourage are invited to share in our special day. We appreciate your understanding.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item glass reveal">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can I bring a plus one?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Due to limited seating, only guests named on the invitation are invited. We'd like to keep our wedding solemn and intimate with the most important people in our lives. No additional guests or plus ones, please.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item glass reveal">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can I leave before the program ends?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>We've lovingly planned every moment of this evening &mdash; we'd love for you to stay and celebrate with us until the very end.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item glass reveal">
+        <button class="faq-question" aria-expanded="false">
+          <span>What if I miss the RSVP deadline?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>If we don't hear from you by the deadline, we won't be able to reserve you a seat. If you need to update your RSVP, please message us directly as soon as possible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============================= FOOTER ============================= -->
 <footer>
@@ -1032,6 +1124,31 @@ footer{
   }
   tick();
   setInterval(tick, 1000);
+
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var btn = item.querySelector('.faq-question');
+    var answer = item.querySelector('.faq-answer');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(openItem){
+        if(openItem !== item){
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-question').setAttribute('aria-expanded','false');
+          openItem.querySelector('.faq-answer').style.maxHeight = null;
+        }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+        answer.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
 
   /* ---------- Event photos: size box to the image's own dimensions ---------- */
   document.querySelectorAll('.event-img').forEach(function(img){
