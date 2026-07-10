@@ -357,6 +357,19 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
 }
 .swatch:hover .swatch-color{ transform:scale(1.1) rotate(6deg); }
 .swatch-name{ font-size:.72rem; letter-spacing:.05em; color:var(--ink-soft); }
+.dress-note{
+  margin-top:18px;
+  font-size:.85rem;
+  line-height:1.7;
+  color:var(--ink-soft);
+}
+
+.dress-note strong{
+  display:block;
+  margin-bottom:4px;
+  color:var(--royal-deep);
+  font-weight:600;
+}
 
 /* ============================= GIFT GUIDE ============================= */
 #gift{ background:var(--white); text-align:center; }
@@ -808,25 +821,48 @@ footer{
     <h2 class="section-title reveal">Wedding Attire Guide</h2>
     <p class="section-sub reveal">Royal blue and beige, for a coordinated and elegant celebration</p>
 
-    <div class="attire-group reveal">
-      <h3>Guests</h3>
-      <div class="attire-row">
-        <div class="attire-col">
-          <div class="who">Female</div>
-          <div class="swatch-row">
-            <div class="swatch"><div class="swatch-color" style="background:#1E3D77;"></div><div class="swatch-name">Blue Tones</div></div>
-            <div class="swatch"><div class="swatch-color" style="background:#E7DCC7;"></div><div class="swatch-name">Beige</div></div>
-          </div>
+   <div class="attire-group reveal">
+  <h3>Guests</h3>
+  <div class="attire-row">
+    <div class="attire-col">
+      <div class="who">Ladies</div>
+      <div class="swatch-row">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#1E3D77;"></div>
+          <div class="swatch-name">Blue Tones</div>
         </div>
-        <div class="attire-col">
-          <div class="who">Male</div>
-          <div class="swatch-row">
-            <div class="swatch"><div class="swatch-color" style="background:#1E3D77;"></div><div class="swatch-name">Blue Tones</div></div>
-            <div class="swatch"><div class="swatch-color" style="background:#E7DCC7;"></div><div class="swatch-name">Beige</div></div>
-          </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#E7DCC7;"></div>
+          <div class="swatch-name">Beige</div>
         </div>
       </div>
+
+      <p class="dress-note">
+        <strong>Attire:</strong><br>
+        Elegant Dresses
+      </p>
     </div>
+
+    <div class="attire-col">
+      <div class="who">Gentlemen</div>
+      <div class="swatch-row">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#1E3D77;"></div>
+          <div class="swatch-name">Blue Tones</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#E7DCC7;"></div>
+          <div class="swatch-name">Beige</div>
+        </div>
+      </div>
+
+      <p class="dress-note">
+        <strong>Attire:</strong><br>
+        Polo
+      </p>
+    </div>
+  </div>
+</div>
 
     <div class="attire-group reveal">
       <h3>Principal Sponsors</h3>
@@ -846,26 +882,49 @@ footer{
     </div>
 
     <div class="attire-group reveal">
-      <h3>Secondary Sponsors</h3>
-      <div class="attire-row">
-        <div class="attire-col">
-          <div class="who">Maid of Honor</div>
-          <div class="swatch-row"><div class="swatch"><div class="swatch-color" style="background:#1E3D77;"></div><div class="swatch-name">Royal Blue</div></div></div>
-        </div>
-        <div class="attire-col">
-          <div class="who">Bridesmaids</div>
-          <div class="swatch-row"><div class="swatch"><div class="swatch-color" style="background:#1E3D77;"></div><div class="swatch-name">Royal Blue</div></div></div>
-        </div>
-        <div class="attire-col">
-          <div class="who">Best Man &amp; Groomsmen</div>
-          <div class="swatch-row">
-            <div class="swatch"><div class="swatch-color" style="background:#1E3D77;"></div><div class="swatch-name">Royal Blue</div></div>
-            <div class="swatch"><div class="swatch-color" style="background:#E7DCC7;"></div><div class="swatch-name">Beige</div></div>
-          </div>
+  <h3>Principal Sponsors</h3>
+
+  <div class="attire-row">
+    <div class="attire-col">
+      <div class="who">Ladies</div>
+
+      <div class="swatch-row">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#E7DCC7;"></div>
+          <div class="swatch-name">Beige</div>
         </div>
       </div>
+
+      <p class="dress-note">
+        <strong>Attire:</strong><br>
+        Beige Cocktail Dress<br>
+        or Long Gown
+      </p>
+    </div>
+
+    <div class="attire-col">
+      <div class="who">Gentlemen</div>
+
+      <div class="swatch-row">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#1A1A1A;"></div>
+          <div class="swatch-name">Black</div>
+        </div>
+
+        <div class="swatch">
+          <div class="swatch-color" style="background:#E7DCC7;"></div>
+          <div class="swatch-name">Beige</div>
+        </div>
+      </div>
+
+      <p class="dress-note">
+        <strong>Attire:</strong><br>
+        Black Suit with<br>
+        Beige Tie
+      </p>
     </div>
   </div>
+</div>
 </section>
 
 <!-- ============================= GIFT GUIDE ============================= -->
