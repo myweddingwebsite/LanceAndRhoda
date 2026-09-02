@@ -195,8 +195,9 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
   position:relative; min-height:100svh; display:flex; align-items:center; justify-content:center;
   text-align:center; overflow:hidden;
   background:
-    radial-gradient(circle at 50% 20%, rgba(46,86,160,.55), transparent 60%),
-    linear-gradient(160deg, #0D1F44 0%, #16305F 45%, #1E3D77 100%);
+    radial-gradient(circle at 50% 20%, rgba(46,86,160,.45), transparent 60%),
+    linear-gradient(160deg, rgba(9,22,52,.82) 0%, rgba(20,45,92,.78) 45%, rgba(23,61,125,.82) 100%),
+    url('https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/1.jpg') center/cover no-repeat;
 }
 .hero-monogram-bg{
   position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
@@ -205,7 +206,7 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
 .hero-monogram-bg svg{ width:min(90vw,900px); height:auto; }
 .hero-sparkle{ position:absolute; border-radius:50%; background:var(--gold-bright); opacity:.5; filter:blur(1px); animation:twinkle 4s ease-in-out infinite; }
 @keyframes twinkle{ 0%,100%{opacity:.15; transform:scale(.8);} 50%{opacity:.7; transform:scale(1.2);} }
-.hero-content{ position:relative; z-index:2; padding:0 24px; color:var(--white); }
+.hero-content{ position:relative; z-index:2; padding:0 24px; color:var(--white); text-shadow:0 2px 18px rgba(6,14,34,.45); }
 .hero-eyebrow{
   letter-spacing:.5em; text-transform:uppercase; font-size:.7rem; color:var(--gold-bright);
   margin-bottom:26px; opacity:0; animation:heroFade .9s var(--ease) forwards .3s;
@@ -289,7 +290,11 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
 .event-actions{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
 
 /* ============================= TIMELINE ============================= */
-#timeline{ background:linear-gradient(180deg, var(--royal-mist), var(--cream)); }
+#timeline{
+  background:
+    linear-gradient(180deg, rgba(238,242,250,.94), rgba(251,249,244,.94)),
+    url('https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/8.jpg') center/cover no-repeat;
+}
 .timeline-wrap{ position:relative; max-width:820px; margin:0 auto; }
 .timeline-wrap::before{
   content:''; position:absolute; left:50%; top:0; bottom:0; width:2px;
@@ -357,22 +362,14 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
 }
 .swatch:hover .swatch-color{ transform:scale(1.1) rotate(6deg); }
 .swatch-name{ font-size:.72rem; letter-spacing:.05em; color:var(--ink-soft); }
-.dress-note{
-  margin-top:18px;
-  font-size:.85rem;
-  line-height:1.7;
-  color:var(--ink-soft);
-}
-
-.dress-note strong{
-  display:block;
-  margin-bottom:4px;
-  color:var(--royal-deep);
-  font-weight:600;
-}
 
 /* ============================= GIFT GUIDE ============================= */
-#gift{ background:var(--white); text-align:center; }
+#gift{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.93), rgba(255,255,255,.93)),
+    url('https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/2.jpg') center/cover no-repeat;
+  text-align:center;
+}
 .gift-msg{ max-width:560px; margin:0 auto 50px; }
 .gift-msg p{ font-size:1.02rem; margin-bottom:14px; }
 .gift-msg p:first-child{ font-family:var(--script); font-style:italic; font-size:1.4rem; color:var(--royal-deep); }
@@ -393,24 +390,34 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
   position:relative;
   background:
     radial-gradient(circle at 80% 20%, rgba(230,199,126,.14), transparent 55%),
-    radial-gradient(circle at 15% 80%, rgba(46,86,160,.5), transparent 60%),
-    linear-gradient(135deg, var(--royal-deep), var(--royal) 55%, var(--royal-light));
+    radial-gradient(circle at 15% 80%, rgba(46,86,160,.4), transparent 60%),
+    linear-gradient(135deg, rgba(12,31,74,.85), rgba(23,60,125,.82) 55%, rgba(46,86,160,.82)),
+    url('https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/4.jpg') center/cover no-repeat;
   border-top:1px solid rgba(230,199,126,.22);
   border-bottom:1px solid rgba(230,199,126,.22);
   text-align:center; padding:90px 0;
 }
-.hashtag-text{ font-family:var(--serif); font-size:clamp(1.1rem,6vw,2.4rem); color:var(--gold-bright); letter-spacing:.01em; margin-bottom:26px; white-space:nowrap; }
+.hashtag-text{ font-family:var(--serif); font-size:clamp(1.1rem,6vw,2.4rem); color:var(--gold-bright); letter-spacing:.01em; margin-bottom:26px; white-space:nowrap; text-shadow:0 2px 14px rgba(6,14,34,.5); }
 @media (max-width:360px){ .hashtag-text{ font-size:5.8vw; letter-spacing:0; } }
 .hashtag-sub{ color:rgba(255,255,255,.75); margin-bottom:30px; }
 #copy-hashtag-msg{ display:block; margin-top:14px; color:var(--gold-bright); font-size:.78rem; letter-spacing:.05em; height:16px; opacity:0; transition:opacity .3s; }
 #copy-hashtag-msg.show{ opacity:1; }
 
 /* ============================= SHARE PHOTOS ============================= */
-#share-photos{ background:var(--cream); text-align:center; }
+#share-photos{
+  background:
+    linear-gradient(180deg, rgba(251,249,244,.92), rgba(251,249,244,.92)),
+    url('https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/6.jpg') center/cover no-repeat;
+  text-align:center;
+}
 .share-card{ max-width:640px; margin:0 auto; padding:56px 40px; text-align:center; }
 
 /* ============================= RSVP ============================= */
-#rsvp{ background:linear-gradient(180deg, var(--royal-mist), var(--cream)); }
+#rsvp{
+  background:
+    linear-gradient(180deg, rgba(238,242,250,.94), rgba(251,249,244,.94)),
+    url('https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/3.jpg') center/cover no-repeat;
+}
 .rsvp-info{ text-align:center; margin-bottom:40px; }
 .rsvp-deadline{
   display:inline-flex; flex-direction:column; align-items:center; gap:4px;
@@ -419,6 +426,19 @@ button{font-family:var(--sans); cursor:pointer; border:none; background:none;}
 .rsvp-deadline .lbl{ font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:600; }
 .rsvp-deadline .date{ font-family:var(--serif); font-size:1.4rem; color:var(--royal-deep); }
 .rsvp-note{ max-width:520px; margin:0 auto; font-size:.92rem; }
+.rsvp-frame-wrap{
+  position:relative; max-width:760px; margin:0 auto; border-radius:var(--radius-lg); overflow:hidden;
+  box-shadow:var(--shadow-soft); background:var(--white);
+  min-height:640px;
+}
+.rsvp-frame-wrap iframe{ width:100%; height:640px; border:0; display:block; position:relative; z-index:1; background:transparent; }
+.rsvp-loading{
+  position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px;
+  background:var(--white); transition:opacity .6s var(--ease), visibility .6s var(--ease);
+}
+.rsvp-loading.hide{ opacity:0; visibility:hidden; }
+.rsvp-spinner{ width:48px; height:48px; border-radius:50%; border:3px solid var(--royal-mist); border-top-color:var(--gold); animation:spin 1s linear infinite; }
+@keyframes spin{ to{ transform:rotate(360deg); } }
 .rsvp-loading span{ font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--royal-light); }
 
 /* ============================= FAQ ============================= */
@@ -465,8 +485,9 @@ footer{
   position:relative;
   background:
     radial-gradient(circle at 25% 10%, rgba(230,199,126,.12), transparent 55%),
-    radial-gradient(circle at 90% 90%, rgba(46,86,160,.45), transparent 60%),
-    linear-gradient(180deg, var(--royal-deep), var(--royal) 60%, var(--royal-deep));
+    radial-gradient(circle at 90% 90%, rgba(46,86,160,.35), transparent 60%),
+    linear-gradient(180deg, rgba(12,31,74,.87), rgba(23,60,125,.84) 60%, rgba(12,31,74,.9)),
+    url('https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/5.jpg') center/cover no-repeat;
   border-top:1px solid rgba(230,199,126,.22);
   color:rgba(255,255,255,.8); text-align:center; padding:70px 0 34px;
 }
@@ -821,94 +842,43 @@ footer{
     <h2 class="section-title reveal">Wedding Attire Guide</h2>
     <p class="section-sub reveal">Royal blue and beige, for a coordinated and elegant celebration</p>
 
-   <div class="attire-group reveal">
-  <h3>Guests</h3>
-  <div class="attire-row">
-    <div class="attire-col">
-      <div class="who">Ladies</div>
-      <div class="swatch-row">
-        <div class="swatch">
-          <div class="swatch-color" style="background:#1E3D77;"></div>
-          <div class="swatch-name">Blue Tones</div>
+    <div class="attire-group reveal">
+      <h3>Guests</h3>
+      <div class="attire-row">
+        <div class="attire-col">
+          <div class="who">Female</div>
+          <div class="swatch-row">
+            <div class="swatch"><div class="swatch-color" style="background:#1E3D77;"></div><div class="swatch-name">Blue Tones</div></div>
+            <div class="swatch"><div class="swatch-color" style="background:#E7DCC7;"></div><div class="swatch-name">Beige</div></div>
+          </div>
         </div>
-        <div class="swatch">
-          <div class="swatch-color" style="background:#E7DCC7;"></div>
-          <div class="swatch-name">Beige</div>
-        </div>
-      </div>
-
-      <p class="dress-note">
-        <strong>Attire:</strong><br>
-        Elegant Dresses
-      </p>
-    </div>
-
-    <div class="attire-col">
-      <div class="who">Gentlemen</div>
-      <div class="swatch-row">
-        <div class="swatch">
-          <div class="swatch-color" style="background:#1E3D77;"></div>
-          <div class="swatch-name">Blue Tones</div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-color" style="background:#E7DCC7;"></div>
-          <div class="swatch-name">Beige</div>
+        <div class="attire-col">
+          <div class="who">Male</div>
+          <div class="swatch-row">
+            <div class="swatch"><div class="swatch-color" style="background:#1E3D77;"></div><div class="swatch-name">Blue Tones</div></div>
+            <div class="swatch"><div class="swatch-color" style="background:#E7DCC7;"></div><div class="swatch-name">Beige</div></div>
+          </div>
         </div>
       </div>
-
-      <p class="dress-note">
-        <strong>Attire:</strong><br>
-        Polo
-      </p>
     </div>
-  </div>
-</div>
-
 
     <div class="attire-group reveal">
-  <h3>Principal Sponsors</h3>
-
-  <div class="attire-row">
-    <div class="attire-col">
-      <div class="who">Ladies</div>
-
-      <div class="swatch-row">
-        <div class="swatch">
-          <div class="swatch-color" style="background:#E7DCC7;"></div>
-          <div class="swatch-name">Beige</div>
+      <h3>Principal Sponsors</h3>
+      <div class="attire-row">
+        <div class="attire-col">
+          <div class="who">Godmothers</div>
+          <div class="swatch-row"><div class="swatch"><div class="swatch-color" style="background:#E7DCC7;"></div><div class="swatch-name">Beige</div></div></div>
+        </div>
+        <div class="attire-col">
+          <div class="who">Godfathers</div>
+          <div class="swatch-row">
+            <div class="swatch"><div class="swatch-color" style="background:#1A1A2E;"></div><div class="swatch-name">Black</div></div>
+            <div class="swatch"><div class="swatch-color" style="background:#E7DCC7;"></div><div class="swatch-name">Beige</div></div>
+          </div>
         </div>
       </div>
-
-      <p class="dress-note">
-        <strong>Attire:</strong><br>
-        Beige Cocktail Dress<br>
-        or Long Gown
-      </p>
     </div>
 
-    <div class="attire-col">
-      <div class="who">Gentlemen</div>
-
-      <div class="swatch-row">
-        <div class="swatch">
-          <div class="swatch-color" style="background:#1A1A1A;"></div>
-          <div class="swatch-name">Black</div>
-        </div>
-
-        <div class="swatch">
-          <div class="swatch-color" style="background:#E7DCC7;"></div>
-          <div class="swatch-name">Beige</div>
-        </div>
-      </div>
-
-      <p class="dress-note">
-        <strong>Attire:</strong><br>
-        Black Suit with<br>
-        Beige Tie
-      </p>
-    </div>
-  </div>
-</div>
     <div class="attire-group reveal">
       <h3>Secondary Sponsors</h3>
       <div class="attire-row">
@@ -990,15 +960,12 @@ footer{
       <p class="rsvp-note">We kindly ask that you respond on or before November 15, 2026, so we can finalize our seating arrangements.</p>
     </div>
 
-   <div class="reveal" style="text-align:center; margin-top:40px;">
-  <a
-    href="https://script.google.com/macros/s/AKfycbx4Qj5FYjN9hXIW68y2Xv6d6_ybkWtCrzgdtcGK7XJsUnBx2xY3H41pRYAggXVvAi5Rcw/exec"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn btn-gold"
-    style="padding:18px 48px; font-size:0.9rem;">
-    Submit Your RSVP
-  </a>
+    <div class="rsvp-frame-wrap reveal">
+      <div class="rsvp-loading" id="rsvp-loading">
+        <div class="rsvp-spinner"></div>
+        <span>Loading RSVP Form&hellip;</span>
+      </div>
+      <iframe id="rsvp-iframe" title="Wedding RSVP Form" src="https://script.google.com/macros/s/AKfycbx4Qj5FYjN9hXIW68y2Xv6d6_ybkWtCrzgdtcGK7XJsUnBx2xY3H41pRYAggXVvAi5Rcw/exec" loading="lazy"></iframe>
     </div>
   </div>
 </section>
@@ -1011,12 +978,21 @@ footer{
     <p class="section-sub reveal">A glimpse into our engagement and prenup moments</p>
 
     <div class="masonry reveal" id="masonry">
-      <div class="masonry-item"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop" alt="Engagement photo placeholder 1" loading="lazy"></div>
-      <div class="masonry-item"><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600&auto=format&fit=crop" alt="Prenup photo placeholder 2" loading="lazy"></div>
-      <div class="masonry-item"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600&auto=format&fit=crop" alt="Engagement photo placeholder 3" loading="lazy"></div>
-      <div class="masonry-item"><img src="https://images.unsplash.com/photo-1583939411023-14b9a4bcd0c9?q=80&w=600&auto=format&fit=crop" alt="Prenup photo placeholder 4" loading="lazy"></div>
-      <div class="masonry-item"><img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?q=80&w=600&auto=format&fit=crop" alt="Engagement photo placeholder 5" loading="lazy"></div>
-      <div class="masonry-item"><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=600&auto=format&fit=crop" alt="Prenup photo placeholder 6" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/1.jpg" alt="Lance and Rhoda engagement photo 1" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/2.jpg" alt="Lance and Rhoda engagement photo 2" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/3.jpg" alt="Lance and Rhoda engagement photo 3" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/4.jpg" alt="Lance and Rhoda engagement photo 4" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/5.jpg" alt="Lance and Rhoda engagement photo 5" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/6.jpg" alt="Lance and Rhoda engagement photo 6" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/7.jpg" alt="Lance and Rhoda engagement photo 7" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/8.jpg" alt="Lance and Rhoda engagement photo 8" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/9.jpg" alt="Lance and Rhoda engagement photo 9" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/10.jpg" alt="Lance and Rhoda engagement photo 10" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/11.jpg" alt="Lance and Rhoda engagement photo 11" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/12.jpg" alt="Lance and Rhoda engagement photo 12" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/13.jpg" alt="Lance and Rhoda engagement photo 13" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/14.jpg" alt="Lance and Rhoda engagement photo 14" loading="lazy"></div>
+      <div class="masonry-item"><img src="https://ik.imagekit.io/jcsquo5nq/Lance%20and%20Rhoda/15.jpg" alt="Lance and Rhoda engagement photo 15" loading="lazy"></div>
     </div>
   </div>
 </section>
